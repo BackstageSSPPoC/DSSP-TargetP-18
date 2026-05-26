@@ -14,7 +14,6 @@ metadata:
     sonarqube.org/project-key:  dssp-targetp-18
     prometheus.io/rule: "kube_pod_container_resource_requests{pod=~'dssp-targetp-18.*'}|resource,kube_pod_container_status_restarts_total{pod=~'dssp-targetp-18.*'}|container"
     prometheus.io/alert: "KubePodCrashLooping,KubeDeploymentReplicasMismatch,KubePodNotReady,KubeContainerWaiting,KubeContainerOOMKilled,KubeDeploymentRolloutStuck"
-    prometheus.io/labels: "namespace=dev
 
 spec:
   type: service
