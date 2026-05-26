@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        APP_NAME = " DSSP-TargetP-18".toLowerCase().trim()
+        APP_NAME = "DSSP-TargetP-18".toLowerCase().trim()
         DOCKER_IMAGE = "chaitanyapandeygspann/${APP_NAME}"
         DOCKER_TAG = "1.0.${BUILD_NUMBER}"
         IMAGE_TAG = "${DOCKER_IMAGE}:${DOCKER_TAG}"
         GITOPS_REPO = "https://github.com/BackstageSSPPoC/k8s-manifests.git"
-        APP_PORTS = "3000"
-        DEPLOY_ENV = "dev"       
-        DEPLOY_NAMESPACE = "dev"
+        APP_PORTS = "5000"
+        DEPLOY_ENV = "qa"       
+        DEPLOY_NAMESPACE = "qa"
     }
 
     stages {
